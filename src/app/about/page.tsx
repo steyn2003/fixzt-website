@@ -1,78 +1,107 @@
-"use client"
+"use client";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { FadeIn, SlideIn, ScaleIn, FloatingElement } from "@/components/animations";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  FadeIn,
+  SlideIn,
+  ScaleIn,
+  FloatingElement,
+} from "@/components/animations";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function About() {
   const values = [
     {
-      title: "Integrity",
+      title: "Integriteit",
       icon: "🤝",
       description:
-        "We believe in honest, transparent dealings with all our clients. Trust is the foundation of every relationship we build.",
+        "Wij geloven in eerlijke, transparante omgang met al onze klanten. Vertrouwen is de basis van elke relatie die wij opbouwen.",
     },
     {
-      title: "Excellence",
+      title: "Excellentie",
       icon: "⭐",
       description:
-        "We strive for excellence in every transaction, ensuring our clients receive the highest quality service and results.",
+        "Wij streven naar excellentie in elke transactie en zorgen ervoor dat onze klanten de hoogste kwaliteit service en resultaten ontvangen.",
     },
     {
-      title: "Innovation",
+      title: "Innovatie",
       icon: "💡",
       description:
-        "We embrace modern technology and innovative solutions to make real estate transactions seamless and efficient.",
+        "Wij omarmen moderne technologie en innovatieve oplossingen om vastgoedtransacties naadloos en efficiënt te maken.",
     },
     {
-      title: "Client-Focused",
+      title: "Klantgericht",
       icon: "❤️",
       description:
-        "Your goals are our goals. We tailor our services to meet your unique needs and deliver personalized solutions.",
+        "Uw doelen zijn onze doelen. Wij stemmen onze diensten af op uw unieke behoeften en leveren gepersonaliseerde oplossingen.",
     },
   ];
 
   const team = [
     {
-      role: "Real Estate Experts",
+      role: "Vastgoedexperts",
       icon: "👔",
-      description: "Licensed professionals with extensive market knowledge",
+      description: "Gediplomeerde professionals met uitgebreide marktkennis",
       image: "/team-experts.jpg",
     },
     {
-      role: "Legal Advisors",
+      role: "Juridische Adviseurs",
       icon: "⚖️",
-      description: "Ensuring compliance and protecting your interests",
+      description: "Zorgen voor naleving en beschermen uw belangen",
       image: "/team-legal.jpg",
     },
     {
-      role: "Property Managers",
+      role: "Vastgoedbeheerders",
       icon: "🏢",
-      description: "Dedicated to maintaining and maximizing property value",
+      description:
+        "Toegewijd aan het behouden en maximaliseren van vastgoedwaarde",
       image: "/team-managers.jpg",
     },
     {
-      role: "Financial Consultants",
+      role: "Financiële Adviseurs",
       icon: "💼",
-      description: "Helping you make informed investment decisions",
+      description: "Helpen u weloverwogen investeringsbeslissingen te nemen",
       image: "/team-financial.jpg",
     },
   ];
 
   const achievements = [
-    { number: "500+", label: "Properties Sold", icon: "🏠" },
-    { number: "1000+", label: "Happy Clients", icon: "😊" },
-    { number: "15+", label: "Years in Business", icon: "📅" },
-    { number: "98%", label: "Client Satisfaction", icon: "⭐" },
+    { number: "500+", label: "Verkochte Panden", icon: "🏠" },
+    { number: "1000+", label: "Tevreden Klanten", icon: "😊" },
+    { number: "15+", label: "Jaar Ervaring", icon: "📅" },
+    { number: "98%", label: "Klanttevredenheid", icon: "⭐" },
   ];
 
   const timeline = [
-    { year: "2008", title: "Founded", desc: "Fixzt was established with a vision to transform real estate" },
-    { year: "2012", title: "Expansion", desc: "Opened multiple offices across the region" },
-    { year: "2018", title: "Digital Transformation", desc: "Launched cutting-edge digital platform" },
-    { year: "2023", title: "Industry Leader", desc: "Recognized as top real estate service provider" },
+    {
+      year: "2008",
+      title: "Opgericht",
+      desc: "Fixzt werd opgericht met de visie om vastgoed te transformeren",
+    },
+    {
+      year: "2012",
+      title: "Uitbreiding",
+      desc: "Meerdere vestigingen geopend in de hele regio",
+    },
+    {
+      year: "2018",
+      title: "Digitale Transformatie",
+      desc: "Geavanceerd digitaal platform gelanceerd",
+    },
+    {
+      year: "2023",
+      title: "Marktleider",
+      desc: "Erkend als toonaangevende vastgoedserviceprovider",
+    },
   ];
 
   return (
@@ -111,20 +140,21 @@ export default function About() {
           <div className="flex flex-col items-center space-y-6 text-center">
             <FadeIn>
               <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-sm font-medium text-primary mb-4">
-                About Us
+                Over Ons
               </div>
             </FadeIn>
 
             <SlideIn direction="down">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-                Meet <span className="text-primary">Fixzt</span>
+                Maak kennis met <span className="text-primary">Fixzt</span>
               </h1>
             </SlideIn>
 
             <FadeIn delay={0.2}>
               <p className="mx-auto max-w-[800px] text-muted-foreground text-lg md:text-xl">
-                Your trusted partner in real estate, committed to making property transactions
-                simple, transparent, and successful since 2008.
+                Uw vertrouwde partner in vastgoed, toegewijd aan het maken van
+                vastgoedtransacties eenvoudig, transparant en succesvol sinds
+                2008.
               </p>
             </FadeIn>
           </div>
@@ -138,41 +168,43 @@ export default function About() {
             <SlideIn direction="left">
               <div className="space-y-6">
                 <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-sm font-medium text-primary">
-                  Our Mission
+                  Onze Missie
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Transforming Real Estate Experiences
+                  Vastgoedervaringen Transformeren
                 </h2>
                 <div className="space-y-4">
                   <p className="text-muted-foreground md:text-lg">
-                    At Fixzt, we are dedicated to revolutionizing the real estate experience. We
-                    understand that buying, selling, or renting property is one of life's most
-                    significant decisions, and we're here to make that journey as smooth and
-                    rewarding as possible.
+                    Bij Fixzt zijn wij toegewijd aan het revolutioneren van de
+                    vastgoedervaring. Wij begrijpen dat het kopen, verkopen of
+                    huren van vastgoed een van de belangrijkste beslissingen in
+                    het leven is, en wij zijn er om die reis zo soepel en lonend
+                    mogelijk te maken.
                   </p>
                   <p className="text-muted-foreground md:text-lg">
-                    With years of experience in the industry, we combine market expertise with
-                    cutting-edge technology to deliver exceptional results. Our team is passionate
-                    about helping you achieve your real estate goals, whether you're a first-time
-                    buyer, seasoned investor, or property owner.
+                    Met jarenlange ervaring in de sector combineren wij
+                    marktexpertise met geavanceerde technologie om
+                    uitzonderlijke resultaten te leveren. Ons team is
+                    gepassioneerd over het helpen bereiken van uw
+                    vastgoeddoelen, of u nu een eerstekoper, doorgewinterde
+                    investeerder of vastgoedeigenaar bent.
                   </p>
                 </div>
-                <Button size="lg">Learn About Our Services</Button>
+                <Button size="lg">Leer Meer Over Onze Diensten</Button>
               </div>
             </SlideIn>
 
             <SlideIn direction="right">
               <FloatingElement>
-                <div className="relative h-[400px] md:h-[500px] bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <div className="text-6xl mb-4">🏢</div>
-                      <p className="text-muted-foreground font-medium">About Us Image</p>
-                      <p className="text-sm text-muted-foreground mt-2">
-                        Suggested: Office building or team photo
-                      </p>
-                    </div>
-                  </div>
+                <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="/about.jpg"
+                    alt="Over Fixzt Vastgoed"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 </div>
               </FloatingElement>
             </SlideIn>
@@ -201,7 +233,9 @@ export default function About() {
                   >
                     {achievement.number}
                   </motion.div>
-                  <div className="text-sm md:text-base opacity-90">{achievement.label}</div>
+                  <div className="text-sm md:text-base opacity-90">
+                    {achievement.label}
+                  </div>
                 </motion.div>
               </FadeIn>
             ))}
@@ -215,10 +249,10 @@ export default function About() {
           <FadeIn>
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
-                Our Core Values
+                Onze Kernwaarden
               </h2>
               <p className="text-muted-foreground md:text-xl max-w-[800px] mx-auto">
-                The principles that guide everything we do and define who we are
+                De principes die alles wat we doen leiden en bepalen wie we zijn
               </p>
             </div>
           </FadeIn>
@@ -242,7 +276,9 @@ export default function About() {
                       <CardTitle>{value.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-sm text-muted-foreground text-center">{value.description}</p>
+                      <p className="text-sm text-muted-foreground text-center">
+                        {value.description}
+                      </p>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -258,10 +294,10 @@ export default function About() {
           <FadeIn>
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
-                Our Journey
+                Onze Reis
               </h2>
               <p className="text-muted-foreground md:text-xl max-w-[800px] mx-auto">
-                A legacy of excellence and growth
+                Een erfenis van excellentie en groei
               </p>
             </div>
           </FadeIn>
@@ -273,9 +309,17 @@ export default function About() {
 
               <div className="space-y-12">
                 {timeline.map((item, index) => (
-                  <SlideIn key={index} direction={index % 2 === 0 ? "left" : "right"} delay={index * 0.1}>
-                    <div className={`flex gap-8 items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                      <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                  <SlideIn
+                    key={index}
+                    direction={index % 2 === 0 ? "left" : "right"}
+                    delay={index * 0.1}
+                  >
+                    <div
+                      className={`flex gap-8 items-center ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
+                    >
+                      <div
+                        className={`flex-1 ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`}
+                      >
                         <Card>
                           <CardHeader>
                             <CardTitle>{item.title}</CardTitle>
@@ -306,10 +350,10 @@ export default function About() {
           <FadeIn>
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
-                Meet Our Team
+                Maak Kennis Met Ons Team
               </h2>
               <p className="text-muted-foreground md:text-xl max-w-[800px] mx-auto">
-                Experienced professionals dedicated to your success
+                Ervaren professionals toegewijd aan uw succes
               </p>
             </div>
           </FadeIn>
@@ -353,22 +397,37 @@ export default function About() {
             <div className="flex flex-col items-center space-y-6 text-center">
               <div className="space-y-4 max-w-[700px]">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Ready to Work With Us?
+                  Klaar Om Met Ons Te Werken?
                 </h2>
                 <p className="text-primary-foreground/90 text-lg md:text-xl">
-                  Let's discuss how we can help you achieve your real estate goals
+                  Laten we bespreken hoe wij u kunnen helpen uw vastgoeddoelen
+                  te bereiken
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button size="lg" variant="secondary" className="text-lg px-8">
-                    Contact Us
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Button
+                    size="lg"
+                    variant="secondary"
+                    className="text-lg px-8"
+                  >
+                    Neem Contact Op
                   </Button>
                 </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   <Link href="/services">
-                    <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10">
-                      View Our Services
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="text-lg px-8 bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10"
+                    >
+                      Bekijk Onze Diensten
                     </Button>
                   </Link>
                 </motion.div>

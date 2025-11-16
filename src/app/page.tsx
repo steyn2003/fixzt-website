@@ -1,8 +1,20 @@
-"use client"
+"use client";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { FadeIn, SlideIn, ScaleIn, StaggerContainer, FloatingElement } from "@/components/animations";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  FadeIn,
+  SlideIn,
+  ScaleIn,
+  StaggerContainer,
+  FloatingElement,
+} from "@/components/animations";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -10,58 +22,61 @@ import Image from "next/image";
 export default function Home() {
   const features = [
     {
-      title: "Expert Guidance",
-      description: "Professional advice from experienced real estate specialists",
+      title: "Deskundige Begeleiding",
+      description: "Professioneel advies van ervaren vastgoedspecialisten",
       icon: "🎯",
-      content: "Our team of experts brings years of experience to help you make informed decisions about your property investments.",
+      content:
+        "Ons team van experts brengt jarenlange ervaring mee om u te helpen weloverwogen beslissingen te nemen over uw vastgoedinvesteringen.",
     },
     {
-      title: "Wide Selection",
-      description: "Access to a diverse portfolio of properties",
+      title: "Breed Aanbod",
+      description: "Toegang tot een divers portfolio van vastgoed",
       icon: "🏘️",
-      content: "From residential homes to commercial spaces, we offer a comprehensive range of properties to match your requirements.",
+      content:
+        "Van woonhuizen tot commerciële ruimtes, wij bieden een uitgebreid scala aan panden die aansluiten bij uw wensen.",
     },
     {
-      title: "Transparent Process",
-      description: "Clear communication and honest dealings",
+      title: "Transparant Proces",
+      description: "Duidelijke communicatie en eerlijke handelswijze",
       icon: "✨",
-      content: "We believe in complete transparency throughout the buying, selling, or renting process with no hidden fees or surprises.",
+      content:
+        "Wij geloven in volledige transparantie gedurende het koop-, verkoop- of huurproces zonder verborgen kosten of verrassingen.",
     },
   ];
 
   const stats = [
-    { value: "500+", label: "Properties Sold" },
-    { value: "1000+", label: "Happy Clients" },
-    { value: "15+", label: "Years Experience" },
-    { value: "98%", label: "Client Satisfaction" },
+    { value: "500+", label: "Verkochte Panden" },
+    { value: "1000+", label: "Tevreden Klanten" },
+    { value: "15+", label: "Jaar Ervaring" },
+    { value: "98%", label: "Klanttevredenheid" },
   ];
 
   const properties = [
     {
-      title: "Modern Family Home",
-      location: "Downtown District",
-      price: "$450,000",
+      title: "Modern Gezinshuis",
+      location: "Centrum",
+      price: "€450.000",
       beds: 4,
       baths: 3,
-      sqft: "2,500",
+      sqft: "232",
       image: "/property-1.jpg",
     },
     {
-      title: "Luxury Apartment",
-      location: "City Center",
-      price: "$320,000",
+      title: "Luxe Appartement",
+      location: "Stadscentrum",
+      price: "€320.000",
       beds: 2,
       baths: 2,
-      sqft: "1,200",
+      sqft: "111",
       image: "/property-2.jpg",
     },
     {
-      title: "Spacious Villa",
-      location: "Suburban Area",
-      price: "$680,000",
+      title: "Ruime Villa",
+      location: "Buitenwijk",
+      price: "€680.000",
       beds: 5,
       baths: 4,
-      sqft: "3,800",
+      sqft: "353",
       image: "/property-3.jpg",
     },
   ];
@@ -69,20 +84,23 @@ export default function Home() {
   const testimonials = [
     {
       name: "Sarah Johnson",
-      role: "Homeowner",
-      content: "Fixzt made buying our first home an absolute breeze. Their team was professional, knowledgeable, and always available to answer our questions.",
+      role: "Huiseigenaar",
+      content:
+        "Fixzt maakte het kopen van ons eerste huis een absolute makkie. Hun team was professioneel, deskundig en altijd beschikbaar om onze vragen te beantwoorden.",
       rating: 5,
     },
     {
       name: "Michael Chen",
-      role: "Property Investor",
-      content: "I've worked with many real estate agencies, but Fixzt stands out. Their market insights helped me make profitable investment decisions.",
+      role: "Vastgoedbelegger",
+      content:
+        "Ik heb met veel vastgoedbureaus gewerkt, maar Fixzt springt eruit. Hun marktinzichten hielpen mij winstgevende investeringsbeslissingen te nemen.",
       rating: 5,
     },
     {
       name: "Emily Rodriguez",
-      role: "Seller",
-      content: "They sold my property in just 3 weeks! The entire process was smooth and transparent. Highly recommend their services.",
+      role: "Verkoper",
+      content:
+        "Ze verkochten mijn pand in slechts 3 weken! Het hele proces verliep soepel en transparant. Ik beveel hun diensten ten zeerste aan.",
       rating: 5,
     },
   ];
@@ -90,28 +108,33 @@ export default function Home() {
   const process = [
     {
       step: "01",
-      title: "Consultation",
-      description: "We start by understanding your needs, preferences, and budget to create a personalized plan.",
+      title: "Consultatie",
+      description:
+        "We beginnen met het begrijpen van uw behoeften, voorkeuren en budget om een persoonlijk plan te maken.",
     },
     {
       step: "02",
-      title: "Property Search",
-      description: "Access our extensive database and get matched with properties that meet your criteria.",
+      title: "Pand Zoeken",
+      description:
+        "Krijg toegang tot onze uitgebreide database en wordt gekoppeld aan panden die aan uw criteria voldoen.",
     },
     {
       step: "03",
-      title: "Site Visits",
-      description: "Schedule convenient property tours and get expert insights about each location.",
+      title: "Bezichtigingen",
+      description:
+        "Plan gemakkelijk pandbezichtigingen en krijg deskundig inzicht over elke locatie.",
     },
     {
       step: "04",
-      title: "Negotiation",
-      description: "We negotiate the best deal on your behalf and handle all the paperwork.",
+      title: "Onderhandeling",
+      description:
+        "Wij onderhandelen de beste deal namens u en regelen al het papierwerk.",
     },
     {
       step: "05",
-      title: "Closing",
-      description: "Complete the transaction smoothly with our legal and financial support.",
+      title: "Afronding",
+      description:
+        "Rond de transactie soepel af met onze juridische en financiële ondersteuning.",
     },
   ];
 
@@ -147,29 +170,26 @@ export default function Home() {
           />
         </div>
 
-        <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <div className="container mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <FadeIn>
                 <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-sm font-medium text-primary mb-4">
-                  Welcome to Fixzt Real Estate
+                  Fixzt vastgoed onderhoud
                 </div>
               </FadeIn>
 
               <SlideIn direction="right">
                 <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-                  Find Your Dream{" "}
-                  <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
-                    Property
-                  </span>{" "}
-                  Today
+                  Vind Vandaag Uw Droompand
                 </h1>
               </SlideIn>
 
               <SlideIn direction="right" delay={0.2}>
                 <p className="text-lg md:text-xl text-muted-foreground max-w-[600px]">
-                  Your trusted partner in finding the perfect property. We make real estate simple,
-                  transparent, and stress-free with over 15 years of expertise.
+                  Uw vertrouwde partner in het vinden van het perfecte pand. Wij
+                  maken vastgoed eenvoudig, transparant en stressvrij met meer
+                  dan 15 jaar expertise.
                 </p>
               </SlideIn>
 
@@ -177,12 +197,16 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="/services">
                     <Button size="lg" className="w-full sm:w-auto">
-                      Explore Properties
+                      Bekijk Panden
                     </Button>
                   </Link>
                   <Link href="/about">
-                    <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                      Learn More
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="w-full sm:w-auto"
+                    >
+                      Meer Informatie
                     </Button>
                   </Link>
                 </div>
@@ -192,30 +216,30 @@ export default function Home() {
                 <div className="flex gap-8 pt-4">
                   {stats.slice(0, 3).map((stat, index) => (
                     <div key={index}>
-                      <div className="text-2xl md:text-3xl font-bold text-primary">{stat.value}</div>
-                      <div className="text-sm text-muted-foreground">{stat.label}</div>
+                      <div className="text-2xl md:text-3xl font-bold text-primary">
+                        {stat.value}
+                      </div>
+                      <div className="text-sm text-muted-foreground">
+                        {stat.label}
+                      </div>
                     </div>
                   ))}
                 </div>
               </SlideIn>
             </div>
 
-            <FloatingElement>
-              <ScaleIn delay={0.3}>
-                <div className="relative h-[400px] md:h-[500px] lg:h-[600px]">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl" />
-                  <div className="absolute inset-4 bg-muted rounded-2xl flex items-center justify-center">
-                    <div className="text-center p-8">
-                      <div className="text-6xl mb-4">🏠</div>
-                      <p className="text-muted-foreground">Hero Image Placeholder</p>
-                      <p className="text-sm text-muted-foreground mt-2">
-                        Replace with: Modern house or building exterior
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </ScaleIn>
-            </FloatingElement>
+            <ScaleIn delay={0.3}>
+              <div className="relative h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/homepage.jpg"
+                  alt="Modern vastgoed showcase"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+              </div>
+            </ScaleIn>
           </div>
         </div>
       </section>
@@ -236,7 +260,9 @@ export default function Home() {
                   >
                     {stat.value}
                   </motion.div>
-                  <div className="text-sm md:text-base opacity-90">{stat.label}</div>
+                  <div className="text-sm md:text-base opacity-90">
+                    {stat.label}
+                  </div>
                 </div>
               </FadeIn>
             ))}
@@ -250,10 +276,11 @@ export default function Home() {
           <FadeIn>
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
-                Why Choose Fixzt?
+                Waarom Kiezen voor Fixzt?
               </h2>
               <p className="text-muted-foreground md:text-xl max-w-[800px] mx-auto">
-                We provide comprehensive real estate solutions tailored to your needs with cutting-edge technology and personalized service
+                Wij bieden uitgebreide vastgoedoplossingen op maat met
+                geavanceerde technologie en persoonlijke service
               </p>
             </div>
           </FadeIn>
@@ -290,17 +317,22 @@ export default function Home() {
           <FadeIn>
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
-                Featured Properties
+                Uitgelichte Panden
               </h2>
               <p className="text-muted-foreground md:text-xl max-w-[800px] mx-auto">
-                Discover our handpicked selection of premium properties
+                Ontdek onze zorgvuldig geselecteerde collectie van premium
+                vastgoed
               </p>
             </div>
           </FadeIn>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {properties.map((property, index) => (
-              <SlideIn key={index} direction={index % 2 === 0 ? "left" : "right"} delay={index * 0.1}>
+              <SlideIn
+                key={index}
+                direction={index % 2 === 0 ? "left" : "right"}
+                delay={index * 0.1}
+              >
                 <motion.div
                   whileHover={{ y: -10 }}
                   transition={{ duration: 0.3 }}
@@ -309,7 +341,9 @@ export default function Home() {
                     <div className="relative h-48 bg-muted flex items-center justify-center">
                       <div className="text-center p-4">
                         <div className="text-4xl mb-2">🏡</div>
-                        <p className="text-xs text-muted-foreground">Image: {property.image}</p>
+                        <p className="text-xs text-muted-foreground">
+                          Afbeelding: {property.image}
+                        </p>
                       </div>
                     </div>
                     <CardHeader>
@@ -317,13 +351,17 @@ export default function Home() {
                       <CardDescription>{property.location}</CardDescription>
                     </CardHeader>
                     <CardContent>
-                      <div className="text-2xl font-bold text-primary mb-4">{property.price}</div>
-                      <div className="flex gap-4 text-sm text-muted-foreground">
-                        <span>🛏️ {property.beds} beds</span>
-                        <span>🚿 {property.baths} baths</span>
-                        <span>📏 {property.sqft} sqft</span>
+                      <div className="text-2xl font-bold text-primary mb-4">
+                        {property.price}
                       </div>
-                      <Button className="w-full mt-4" variant="outline">View Details</Button>
+                      <div className="flex gap-4 text-sm text-muted-foreground">
+                        <span>🛏️ {property.beds} slaapkamers</span>
+                        <span>🚿 {property.baths} badkamers</span>
+                        <span>📏 {property.sqft} m²</span>
+                      </div>
+                      <Button className="w-full mt-4" variant="outline">
+                        Bekijk Details
+                      </Button>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -334,7 +372,7 @@ export default function Home() {
           <FadeIn delay={0.5}>
             <div className="text-center mt-12">
               <Link href="/services">
-                <Button size="lg">View All Properties</Button>
+                <Button size="lg">Bekijk Alle Panden</Button>
               </Link>
             </div>
           </FadeIn>
@@ -347,10 +385,11 @@ export default function Home() {
           <FadeIn>
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
-                How It Works
+                Hoe Het Werkt
               </h2>
               <p className="text-muted-foreground md:text-xl max-w-[800px] mx-auto">
-                Our streamlined process makes finding your perfect property simple and stress-free
+                Ons gestroomlijnde proces maakt het vinden van uw perfecte pand
+                eenvoudig en stressvrij
               </p>
             </div>
           </FadeIn>
@@ -375,7 +414,9 @@ export default function Home() {
                         <CardTitle className="text-xl">{item.title}</CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <p className="text-sm text-muted-foreground">{item.description}</p>
+                        <p className="text-sm text-muted-foreground">
+                          {item.description}
+                        </p>
                       </CardContent>
                     </Card>
                   </motion.div>
@@ -392,10 +433,10 @@ export default function Home() {
           <FadeIn>
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
-                What Our Clients Say
+                Wat Onze Klanten Zeggen
               </h2>
               <p className="text-muted-foreground md:text-xl max-w-[800px] mx-auto">
-                Don't just take our word for it - hear from our satisfied clients
+                Geloof ons niet zomaar - hoor het van onze tevreden klanten
               </p>
             </div>
           </FadeIn>
@@ -411,10 +452,14 @@ export default function Home() {
                     <CardHeader>
                       <div className="flex gap-1 mb-2">
                         {[...Array(testimonial.rating)].map((_, i) => (
-                          <span key={i} className="text-yellow-500">⭐</span>
+                          <span key={i} className="text-yellow-500">
+                            ⭐
+                          </span>
                         ))}
                       </div>
-                      <CardTitle className="text-lg">{testimonial.name}</CardTitle>
+                      <CardTitle className="text-lg">
+                        {testimonial.name}
+                      </CardTitle>
                       <CardDescription>{testimonial.role}</CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -438,19 +483,23 @@ export default function Home() {
               <CardContent className="p-8 md:p-12">
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
                   <div>
-                    <h3 className="text-3xl font-bold mb-4">Stay Updated</h3>
+                    <h3 className="text-3xl font-bold mb-4">
+                      Blijf Op De Hoogte
+                    </h3>
                     <p className="text-primary-foreground/90 mb-6">
-                      Subscribe to our newsletter and get the latest property listings, market insights, and exclusive deals delivered to your inbox.
+                      Abonneer u op onze nieuwsbrief en ontvang de nieuwste
+                      pandbeschrijvingen, marktinzichten en exclusieve deals in
+                      uw inbox.
                     </p>
                   </div>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <input
                       type="email"
-                      placeholder="Enter your email"
+                      placeholder="Voer uw e-mailadres in"
                       className="flex-1 px-4 py-3 rounded-md text-foreground"
                     />
                     <Button size="lg" variant="secondary">
-                      Subscribe
+                      Abonneer
                     </Button>
                   </div>
                 </div>
@@ -467,22 +516,33 @@ export default function Home() {
             <div className="flex flex-col items-center space-y-8 text-center">
               <div className="space-y-4 max-w-[800px]">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
-                  Ready to Find Your Perfect Property?
+                  Klaar Om Uw Perfecte Pand Te Vinden?
                 </h2>
                 <p className="text-muted-foreground md:text-xl">
-                  Get in touch with us today and let our expert team help you take the next step in your real estate journey
+                  Neem vandaag nog contact met ons op en laat ons deskundige
+                  team u helpen de volgende stap te zetten in uw vastgoedreis
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   <Button size="lg" className="text-lg px-8">
-                    Contact Us Today
+                    Neem Vandaag Contact Op
                   </Button>
                 </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   <Link href="/services">
-                    <Button variant="outline" size="lg" className="text-lg px-8">
-                      Browse Services
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="text-lg px-8"
+                    >
+                      Bekijk Diensten
                     </Button>
                   </Link>
                 </motion.div>

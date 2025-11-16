@@ -1,7 +1,13 @@
-"use client"
+"use client";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { FadeIn, SlideIn, ScaleIn } from "@/components/animations";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -9,75 +15,75 @@ import Link from "next/link";
 export default function Services() {
   const services = [
     {
-      title: "Property Sales",
-      description: "Buy or sell residential and commercial properties",
+      title: "Vastgoedverkoop",
+      description: "Koop of verkoop residentieel en commercieel vastgoed",
       icon: "🏠",
       image: "/service-sales.jpg",
       features: [
-        "Market analysis and pricing strategy",
-        "Professional photography and listings",
-        "Negotiation and closing assistance",
-        "Legal documentation support",
+        "Marktanalyse en prijsstrategie",
+        "Professionele fotografie en advertenties",
+        "Onderhandelings- en afsluitingshulp",
+        "Juridische documentatieondersteuning",
       ],
     },
     {
-      title: "Property Rentals",
-      description: "Find the perfect rental or lease your property",
+      title: "Vastgoedverhuur",
+      description: "Vind de perfecte huurwoning of verhuur uw vastgoed",
       icon: "🔑",
       image: "/service-rentals.jpg",
       features: [
-        "Tenant screening and verification",
-        "Lease agreement preparation",
-        "Property maintenance coordination",
-        "Rent collection and management",
+        "Screening en verificatie van huurders",
+        "Voorbereiding van huurovereenkomsten",
+        "Coördinatie van vastgoedonderhoud",
+        "Huurinning en beheer",
       ],
     },
     {
-      title: "Property Management",
-      description: "Comprehensive property management solutions",
+      title: "Vastgoedbeheer",
+      description: "Uitgebreide vastgoedbeheersoplossingen",
       icon: "🏢",
       image: "/service-management.jpg",
       features: [
-        "24/7 emergency maintenance",
-        "Regular property inspections",
-        "Financial reporting and accounting",
-        "Tenant relations management",
+        "24/7 spoedonderhoud",
+        "Regelmatige vastgoedinspecties",
+        "Financiële rapportage en boekhouding",
+        "Beheer van huurderrelaties",
       ],
     },
     {
-      title: "Investment Consulting",
-      description: "Expert guidance for property investments",
+      title: "Beleggingsadvies",
+      description: "Deskundig advies voor vastgoedbeleggingen",
       icon: "📈",
       image: "/service-investment.jpg",
       features: [
-        "Market trend analysis",
-        "ROI calculations and projections",
-        "Portfolio diversification strategies",
-        "Tax optimization advice",
+        "Analyse van markttrends",
+        "ROI-berekeningen en projecties",
+        "Strategieën voor portefeuillediversificatie",
+        "Fiscaal optimalisatieadvies",
       ],
     },
     {
-      title: "Property Valuation",
-      description: "Accurate property assessment and appraisal",
+      title: "Vastgoedtaxatie",
+      description: "Nauwkeurige beoordeling en taxatie van vastgoed",
       icon: "💰",
       image: "/service-valuation.jpg",
       features: [
-        "Comparative market analysis",
-        "Professional appraisal services",
-        "Development potential assessment",
-        "Detailed valuation reports",
+        "Vergelijkende marktanalyse",
+        "Professionele taxatiediensten",
+        "Beoordeling van ontwikkelingspotentieel",
+        "Gedetailleerde taxatierapporten",
       ],
     },
     {
-      title: "Legal Assistance",
-      description: "Comprehensive legal support for transactions",
+      title: "Juridische Bijstand",
+      description: "Uitgebreide juridische ondersteuning voor transacties",
       icon: "⚖️",
       image: "/service-legal.jpg",
       features: [
-        "Contract review and drafting",
-        "Title search and verification",
-        "Regulatory compliance guidance",
-        "Dispute resolution support",
+        "Contractbeoordeling en opstelling",
+        "Eigendomsonderzoek en verificatie",
+        "Begeleiding bij naleving van regelgeving",
+        "Ondersteuning bij geschillenbeslechting",
       ],
     },
   ];
@@ -106,19 +112,21 @@ export default function Services() {
           <div className="flex flex-col items-center space-y-6 text-center">
             <FadeIn>
               <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-sm font-medium text-primary mb-4">
-                What We Offer
+                Wat Wij Bieden
               </div>
             </FadeIn>
 
             <SlideIn direction="down">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-                Our <span className="text-primary">Services</span>
+                Onze <span className="text-primary">Diensten</span>
               </h1>
             </SlideIn>
 
             <FadeIn delay={0.2}>
               <p className="mx-auto max-w-[800px] text-muted-foreground text-lg md:text-xl">
-                Comprehensive real estate solutions designed to meet all your property needs with expert guidance and personalized service
+                Uitgebreide vastgoedoplossingen ontworpen om aan al uw
+                vastgoedbehoeften te voldoen met deskundige begeleiding en
+                persoonlijke service
               </p>
             </FadeIn>
           </div>
@@ -153,7 +161,9 @@ export default function Services() {
 
                     <CardHeader>
                       <CardTitle className="text-xl">{service.title}</CardTitle>
-                      <CardDescription className="text-base">{service.description}</CardDescription>
+                      <CardDescription className="text-base">
+                        {service.description}
+                      </CardDescription>
                     </CardHeader>
 
                     <CardContent className="flex-1">
@@ -167,8 +177,12 @@ export default function Services() {
                             transition={{ delay: idx * 0.1 }}
                             className="flex items-start"
                           >
-                            <span className="mr-3 text-primary font-bold text-lg">✓</span>
-                            <span className="text-sm text-muted-foreground">{feature}</span>
+                            <span className="mr-3 text-primary font-bold text-lg">
+                              ✓
+                            </span>
+                            <span className="text-sm text-muted-foreground">
+                              {feature}
+                            </span>
                           </motion.li>
                         ))}
                       </ul>
@@ -179,7 +193,7 @@ export default function Services() {
                         whileTap={{ scale: 0.95 }}
                       >
                         <Button className="w-full" variant="outline">
-                          Learn More
+                          Meer Informatie
                         </Button>
                       </motion.div>
                     </CardContent>
@@ -197,22 +211,42 @@ export default function Services() {
           <FadeIn>
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
-                Why Work With Us?
+                Waarom Met Ons Werken?
               </h2>
               <p className="text-muted-foreground md:text-xl max-w-[800px] mx-auto">
-                Experience the difference of working with true professionals
+                Ervaar het verschil van samenwerken met echte professionals
               </p>
             </div>
           </FadeIn>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: "🎯", title: "Personalized Service", desc: "Tailored solutions for your unique needs" },
-              { icon: "⚡", title: "Fast Response", desc: "Quick turnaround on all inquiries" },
-              { icon: "🏆", title: "Proven Results", desc: "Track record of successful transactions" },
-              { icon: "💼", title: "Professional Team", desc: "Expert agents at your service" },
+              {
+                icon: "🎯",
+                title: "Persoonlijke Service",
+                desc: "Oplossingen op maat voor uw unieke behoeften",
+              },
+              {
+                icon: "⚡",
+                title: "Snelle Reactie",
+                desc: "Snelle afhandeling van alle aanvragen",
+              },
+              {
+                icon: "🏆",
+                title: "Bewezen Resultaten",
+                desc: "Trackrecord van succesvolle transacties",
+              },
+              {
+                icon: "💼",
+                title: "Professioneel Team",
+                desc: "Deskundige makelaars tot uw dienst",
+              },
             ].map((benefit, index) => (
-              <SlideIn key={index} direction={index % 2 === 0 ? "left" : "right"} delay={index * 0.1}>
+              <SlideIn
+                key={index}
+                direction={index % 2 === 0 ? "left" : "right"}
+                delay={index * 0.1}
+              >
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.2 }}
@@ -243,22 +277,42 @@ export default function Services() {
           <FadeIn>
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
-                Our Process
+                Ons Proces
               </h2>
               <p className="text-muted-foreground md:text-xl max-w-[800px] mx-auto">
-                A streamlined approach to achieving your real estate goals
+                Een gestroomlijnde aanpak om uw vastgoeddoelen te bereiken
               </p>
             </div>
           </FadeIn>
 
           <div className="max-w-4xl mx-auto">
             {[
-              { step: "1", title: "Initial Consultation", desc: "We meet to understand your needs and goals" },
-              { step: "2", title: "Strategy Development", desc: "Create a customized plan tailored to your situation" },
-              { step: "3", title: "Implementation", desc: "Execute the plan with precision and expertise" },
-              { step: "4", title: "Ongoing Support", desc: "Provide continuous assistance until completion" },
+              {
+                step: "1",
+                title: "Eerste Consultatie",
+                desc: "We ontmoeten elkaar om uw behoeften en doelen te begrijpen",
+              },
+              {
+                step: "2",
+                title: "Strategieontwikkeling",
+                desc: "Een op maat gemaakt plan ontwikkelen voor uw situatie",
+              },
+              {
+                step: "3",
+                title: "Uitvoering",
+                desc: "Het plan uitvoeren met precisie en expertise",
+              },
+              {
+                step: "4",
+                title: "Voortdurende Ondersteuning",
+                desc: "Continue hulp bieden tot voltooiing",
+              },
             ].map((item, index) => (
-              <SlideIn key={index} direction={index % 2 === 0 ? "left" : "right"} delay={index * 0.1}>
+              <SlideIn
+                key={index}
+                direction={index % 2 === 0 ? "left" : "right"}
+                delay={index * 0.1}
+              >
                 <motion.div
                   className="flex gap-6 mb-12 last:mb-0"
                   whileHover={{ x: 10 }}
@@ -291,22 +345,37 @@ export default function Services() {
             <div className="flex flex-col items-center space-y-6 text-center">
               <div className="space-y-4 max-w-[700px]">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Ready to Get Started?
+                  Klaar om te Beginnen?
                 </h2>
                 <p className="text-primary-foreground/90 text-lg md:text-xl">
-                  Contact us today to discuss how we can help with your real estate needs
+                  Neem vandaag nog contact met ons op om te bespreken hoe wij u
+                  kunnen helpen met uw vastgoedbehoeften
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Button size="lg" variant="secondary" className="text-lg px-8">
-                    Get Started
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Button
+                    size="lg"
+                    variant="secondary"
+                    className="text-lg px-8"
+                  >
+                    Aan de Slag
                   </Button>
                 </motion.div>
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   <Link href="/about">
-                    <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10">
-                      Learn About Us
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      className="text-lg px-8 bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10"
+                    >
+                      Leer Ons Kennen
                     </Button>
                   </Link>
                 </motion.div>

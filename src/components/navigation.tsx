@@ -1,38 +1,45 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
-import { useState } from "react"
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 export function Navigation() {
-  const pathname = usePathname()
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  const pathname = usePathname();
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const links = [
     { href: "/", label: "Home" },
-    { href: "/services", label: "Services" },
-    { href: "/about", label: "About" },
-  ]
+    { href: "/services", label: "Diensten" },
+    { href: "/about", label: "Over Ons" },
+  ];
 
   return (
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+      className="sticky top-0 z-50 w-full bg-white shadow-sm"
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center space-x-2">
-          <motion.span
-            className="text-2xl font-bold text-primary"
+          <motion.div
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
+            className="relative h-10 w-32"
           >
-            Fixzt
-          </motion.span>
+            <Image
+              src="/logo.png"
+              alt="Fixzt Logo"
+              fill
+              className="object-contain"
+              priority
+            />
+          </motion.div>
         </Link>
 
         <nav className="flex items-center space-x-6">
@@ -49,7 +56,7 @@ export function Navigation() {
                   "text-sm font-medium transition-colors relative z-10",
                   pathname === link.href
                     ? "text-foreground"
-                    : "text-muted-foreground hover:text-primary"
+                    : "text-muted-foreground hover:text-primary",
                 )}
               >
                 {link.label}
@@ -69,10 +76,10 @@ export function Navigation() {
             </div>
           ))}
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button size="sm">Contact Us</Button>
+            <Button size="sm">Contact</Button>
           </motion.div>
         </nav>
       </div>
     </motion.header>
-  )
+  );
 }
