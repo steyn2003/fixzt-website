@@ -21,86 +21,88 @@ import Image from "next/image";
 export default function About() {
   const values = [
     {
-      title: "Integriteit",
+      title: "Betrouwbaar",
       icon: "🤝",
       description:
-        "Wij geloven in eerlijke, transparante omgang met al onze klanten. Vertrouwen is de basis van elke relatie die wij opbouwen.",
+        "Wij zijn de vaste partner waarop u kunt rekenen. Consistente kwaliteit en betrouwbare service bij elk onderhoud.",
     },
     {
-      title: "Excellentie",
-      icon: "⭐",
+      title: "Snel & Flexibel",
+      icon: "⚡",
       description:
-        "Wij streven naar excellentie in elke transactie en zorgen ervoor dat onze klanten de hoogste kwaliteit service en resultaten ontvangen.",
+        "Direct beschikbaar wanneer u ons nodig heeft. Snelle respons en flexibele planning voor al uw onderhoudswensen.",
     },
     {
-      title: "Innovatie",
-      icon: "💡",
+      title: "Preventief Denken",
+      icon: "🔍",
       description:
-        "Wij omarmen moderne technologie en innovatieve oplossingen om vastgoedtransacties naadloos en efficiënt te maken.",
+        "Wij signaleren problemen voordat ze groot worden. Preventief onderhoud voorkomt dure reparaties en verstoringen.",
     },
     {
-      title: "Klantgericht",
-      icon: "❤️",
+      title: "Altijd Bereikbaar",
+      icon: "📞",
       description:
-        "Uw doelen zijn onze doelen. Wij stemmen onze diensten af op uw unieke behoeften en leveren gepersonaliseerde oplossingen.",
+        "24/7 beschikbaar voor spoedgevallen. Uw eerste aanspreekpunt op locatie voor alle technische zaken.",
     },
   ];
 
-  const team = [
+  const services = [
     {
-      role: "Vastgoedexperts",
-      icon: "👔",
-      description: "Gediplomeerde professionals met uitgebreide marktkennis",
+      role: "Dagelijks Onderhoud",
+      icon: "🔧",
+      description:
+        "Klein reparatiewerk en dagelijks technisch onderhoud van uw gebouwen",
       image: "/team-experts.jpg",
     },
     {
-      role: "Juridische Adviseurs",
-      icon: "⚖️",
-      description: "Zorgen voor naleving en beschermen uw belangen",
+      role: "Preventief Onderhoud",
+      icon: "🛡️",
+      description:
+        "Regelmatige inspecties en preventieve maatregelen om problemen voor te zijn",
       image: "/team-legal.jpg",
     },
     {
-      role: "Vastgoedbeheerders",
-      icon: "🏢",
+      role: "Spoedservice",
+      icon: "🚨",
       description:
-        "Toegewijd aan het behouden en maximaliseren van vastgoedwaarde",
+        "24/7 beschikbaar voor spoedgevallen en technische calamiteiten",
       image: "/team-managers.jpg",
     },
     {
-      role: "Financiële Adviseurs",
-      icon: "💼",
-      description: "Helpen u weloverwogen investeringsbeslissingen te nemen",
+      role: "Kleine Projecten",
+      icon: "🏗️",
+      description: "Vervangingswerk en kleine projecten binnen uw vastgoed",
       image: "/team-financial.jpg",
     },
   ];
 
   const achievements = [
-    { number: "500+", label: "Verkochte Panden", icon: "🏠" },
-    { number: "1000+", label: "Tevreden Klanten", icon: "😊" },
+    { number: "500+", label: "Panden Beheerd", icon: "🏢" },
+    { number: "1000+", label: "Tevreden Huurders", icon: "😊" },
     { number: "15+", label: "Jaar Ervaring", icon: "📅" },
-    { number: "98%", label: "Klanttevredenheid", icon: "⭐" },
+    { number: "24/7", label: "Beschikbaarheid", icon: "⏰" },
   ];
 
   const timeline = [
     {
       year: "2008",
       title: "Opgericht",
-      desc: "Fixzt werd opgericht met de visie om vastgoed te transformeren",
+      desc: "Fixzt werd opgericht als specialist in commercieel vastgoed onderhoud",
     },
     {
       year: "2012",
       title: "Uitbreiding",
-      desc: "Meerdere vestigingen geopend in de hele regio",
+      desc: "Groei naar meerdere locaties met vaste aanwezigheid in gebouwen",
     },
     {
       year: "2018",
-      title: "Digitale Transformatie",
-      desc: "Geavanceerd digitaal platform gelanceerd",
+      title: "Digitale Innovatie",
+      desc: "Implementatie van geavanceerd onderhoudsmanagement systeem",
     },
     {
       year: "2023",
       title: "Marktleider",
-      desc: "Erkend als toonaangevende vastgoedserviceprovider",
+      desc: "Erkend als toonaangevende facility management partner",
     },
   ];
 
@@ -140,7 +142,7 @@ export default function About() {
           <div className="flex flex-col items-center space-y-6 text-center">
             <FadeIn>
               <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-sm font-medium text-primary mb-4">
-                Over Ons
+                Over Fixzt
               </div>
             </FadeIn>
 
@@ -152,9 +154,9 @@ export default function About() {
 
             <FadeIn delay={0.2}>
               <p className="mx-auto max-w-[800px] text-muted-foreground text-lg md:text-xl">
-                Uw vertrouwde partner in vastgoed, toegewijd aan het maken van
-                vastgoedtransacties eenvoudig, transparant en succesvol sinds
-                2008.
+                Full-service dienstverlener voor commercieel vastgoed onderhoud.
+                Uw betrouwbare partner voor dagelijks onderhoud, preventieve
+                service en spoedinterventies.
               </p>
             </FadeIn>
           </div>
@@ -171,23 +173,22 @@ export default function About() {
                   Onze Missie
                 </div>
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Vastgoedervaringen Transformeren
+                  Gebouwen in Topconditie Houden
                 </h2>
                 <div className="space-y-4">
                   <p className="text-muted-foreground md:text-lg">
-                    Bij Fixzt zijn wij toegewijd aan het revolutioneren van de
-                    vastgoedervaring. Wij begrijpen dat het kopen, verkopen of
-                    huren van vastgoed een van de belangrijkste beslissingen in
-                    het leven is, en wij zijn er om die reis zo soepel en lonend
-                    mogelijk te maken.
+                    Bij Fixzt zijn wij toegewijd aan het in optimale technische
+                    staat houden van uw commerciële vastgoed. Wij begrijpen dat
+                    goed onderhoud essentieel is voor de waarde van uw pand en
+                    het comfort van uw huurders.
                   </p>
                   <p className="text-muted-foreground md:text-lg">
-                    Met jarenlange ervaring in de sector combineren wij
-                    marktexpertise met geavanceerde technologie om
-                    uitzonderlijke resultaten te leveren. Ons team is
-                    gepassioneerd over het helpen bereiken van uw
-                    vastgoeddoelen, of u nu een eerstekoper, doorgewinterde
-                    investeerder of vastgoedeigenaar bent.
+                    Als vaste aanwezigheid in gebouwen zijn wij het eerste
+                    aanspreekpunt voor huurders en zorgen we voor directe
+                    oplossingen. Onze preventieve aanpak voorkomt grote
+                    problemen en zorgt ervoor dat vastgoedbeheerders, eigenaren
+                    en investeerders volledig ontzorgd worden met één
+                    betrouwbare, vaste partner.
                   </p>
                 </div>
                 <Button size="lg">Leer Meer Over Onze Diensten</Button>
@@ -199,7 +200,7 @@ export default function About() {
                 <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
                   <Image
                     src="/about.jpg"
-                    alt="Over Fixzt Vastgoed"
+                    alt="Fixzt Facility Management"
                     fill
                     className="object-cover"
                     priority
@@ -252,7 +253,7 @@ export default function About() {
                 Onze Kernwaarden
               </h2>
               <p className="text-muted-foreground md:text-xl max-w-[800px] mx-auto">
-                De principes die alles wat we doen leiden en bepalen wie we zijn
+                De principes die onze service en aanpak bepalen
               </p>
             </div>
           </FadeIn>
@@ -297,7 +298,7 @@ export default function About() {
                 Onze Reis
               </h2>
               <p className="text-muted-foreground md:text-xl max-w-[800px] mx-auto">
-                Een erfenis van excellentie en groei
+                Een erfenis van betrouwbaarheid en groei in facility management
               </p>
             </div>
           </FadeIn>
@@ -344,22 +345,22 @@ export default function About() {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Why Fixzt Section */}
       <section className="w-full py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4 md:px-6">
           <FadeIn>
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
-                Maak Kennis Met Ons Team
+                Waarom Fixzt?
               </h2>
               <p className="text-muted-foreground md:text-xl max-w-[800px] mx-auto">
-                Ervaren professionals toegewijd aan uw succes
+                Uw betrouwbare partner voor technisch gebouwbeheer
               </p>
             </div>
           </FadeIn>
 
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {team.map((member, index) => (
+            {services.map((member, index) => (
               <ScaleIn key={index} delay={index * 0.1}>
                 <motion.div
                   whileHover={{ y: -10 }}
@@ -387,6 +388,66 @@ export default function About() {
               </ScaleIn>
             ))}
           </div>
+
+          <FadeIn delay={0.5}>
+            <div className="mt-16 max-w-3xl mx-auto">
+              <Card className="border-2 border-primary/20">
+                <CardHeader>
+                  <CardTitle className="text-2xl">
+                    Onze Toegevoegde Waarde
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="text-2xl mt-1">🏢</div>
+                    <div>
+                      <h4 className="font-semibold mb-1">
+                        Vaste Aanwezigheid in Gebouwen
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Wij zijn er fysiek, waardoor we snel kunnen handelen en
+                        problemen direct kunnen signaleren
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="text-2xl mt-1">👥</div>
+                    <div>
+                      <h4 className="font-semibold mb-1">
+                        Direct Contact met Huurders
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Als eerste aanspreekpunt zorgen wij voor snelle
+                        communicatie en hoge klanttevredenheid
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="text-2xl mt-1">🔧</div>
+                    <div>
+                      <h4 className="font-semibold mb-1">
+                        Technische Expertise
+                      </h4>
+                      <p className="text-sm text-muted-foreground">
+                        Ons team beschikt over alle technische kennis voor
+                        optimaal gebouwbeheer
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="text-2xl mt-1">🛡️</div>
+                    <div>
+                      <h4 className="font-semibold mb-1">Preventieve Aanpak</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Door preventief onderhoud voorkomen wij grote problemen
+                        en kostbare reparaties
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -397,11 +458,11 @@ export default function About() {
             <div className="flex flex-col items-center space-y-6 text-center">
               <div className="space-y-4 max-w-[700px]">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Klaar Om Met Ons Te Werken?
+                  Klaar Voor Professioneel Gebouwbeheer?
                 </h2>
                 <p className="text-primary-foreground/90 text-lg md:text-xl">
-                  Laten we bespreken hoe wij u kunnen helpen uw vastgoeddoelen
-                  te bereiken
+                  Laten we bespreken hoe wij uw vastgoed optimaal kunnen
+                  onderhouden en uw huurders kunnen ontzorgen
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">

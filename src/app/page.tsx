@@ -22,119 +22,179 @@ import Image from "next/image";
 export default function Home() {
   const features = [
     {
-      title: "Deskundige Begeleiding",
-      description: "Professioneel advies van ervaren vastgoedspecialisten",
-      icon: "🎯",
+      title: "Full-Service Onderhoud",
+      description: "Eén partij voor alle onderhoudswerkzaamheden",
+      icon: "🔧",
       content:
-        "Ons team van experts brengt jarenlange ervaring mee om u te helpen weloverwogen beslissingen te nemen over uw vastgoedinvesteringen.",
+        "Van kleine reparaties tot preventief onderhoud - wij zijn uw vaste, betrouwbare partner voor alle onderhoudsklussen in commercieel vastgoed.",
     },
     {
-      title: "Breed Aanbod",
-      description: "Toegang tot een divers portfolio van vastgoed",
-      icon: "🏘️",
+      title: "Commercieel Vastgoed Specialist",
+      description:
+        "Gespecialiseerd in kantoren, winkelcentra en bedrijfsruimtes",
+      icon: "🏢",
       content:
-        "Van woonhuizen tot commerciële ruimtes, wij bieden een uitgebreid scala aan panden die aansluiten bij uw wensen.",
+        "Wij kennen de specifieke eisen van commercieel vastgoed en zorgen dat uw gebouw technisch in topconditie blijft voor uw huurders.",
     },
     {
-      title: "Transparant Proces",
-      description: "Duidelijke communicatie en eerlijke handelswijze",
-      icon: "✨",
+      title: "Snelle Respons",
+      description: "Direct schakelen bij noodgevallen en acute problemen",
+      icon: "⚡",
       content:
-        "Wij geloven in volledige transparantie gedurende het koop-, verkoop- of huurproces zonder verborgen kosten of verrassingen.",
+        "Uw eerste aanspreekpunt op locatie. Wij zorgen voor snelle respons bij storingen en noodgevallen om grotere problemen te voorkomen.",
     },
   ];
 
   const stats = [
-    { value: "500+", label: "Verkochte Panden" },
-    { value: "1000+", label: "Tevreden Klanten" },
-    { value: "15+", label: "Jaar Ervaring" },
+    { value: "24/7", label: "Bereikbaar" },
+    { value: "100+", label: "Beheerde Locaties" },
+    { value: "10+", label: "Jaar Ervaring" },
     { value: "98%", label: "Klanttevredenheid" },
   ];
 
-  const properties = [
+  const targetAudience = [
     {
-      title: "Modern Gezinshuis",
-      location: "Centrum",
-      price: "€450.000",
-      beds: 4,
-      baths: 3,
-      sqft: "232",
-      image: "/property-1.jpg",
+      title: "Vastgoedbeheerders",
+      description: "Ontzorging voor alle dagelijkse onderhoudsklussen",
+      icon: "👔",
     },
     {
-      title: "Luxe Appartement",
-      location: "Stadscentrum",
-      price: "€320.000",
-      beds: 2,
-      baths: 2,
-      sqft: "111",
-      image: "/property-2.jpg",
+      title: "Vastgoedeigenaren",
+      description: "Technisch beheer om waarde te behouden",
+      icon: "🏛️",
     },
     {
-      title: "Ruime Villa",
-      location: "Buitenwijk",
-      price: "€680.000",
-      beds: 5,
-      baths: 4,
-      sqft: "353",
-      image: "/property-3.jpg",
+      title: "Vastgoedbeleggers",
+      description: "Betrouwbaar onderhoud voor uw portfolio",
+      icon: "📊",
+    },
+  ];
+
+  const buildingTypes = [
+    {
+      title: "Winkelpanden & Winkelcentra",
+      description: "Onderhoud voor retail vastgoed",
+      image: "/building-retail.jpg",
+    },
+    {
+      title: "Kantoorgebouwen",
+      description: "Facility management voor kantoren",
+      image: "/building-office.jpg",
+    },
+    {
+      title: "Light Industrial & Bedrijfsruimtes",
+      description: "Technisch onderhoud bedrijfspanden",
+      image: "/building-industrial.jpg",
+    },
+    {
+      title: "Zorglocaties",
+      description: "Betrouwbaar onderhoud zorginstellingen",
+      image: "/building-care.jpg",
+    },
+    {
+      title: "Hotels",
+      description: "Continue inzetbaarheid horecavastgoed",
+      image: "/building-hotel.jpg",
+    },
+    {
+      title: "Wooncomplexen",
+      description: "Complexmatig beheer woongebouwen",
+      image: "/building-residential.jpg",
+    },
+  ];
+
+  const services = [
+    {
+      step: "01",
+      title: "Kleine Reparaties & Dagelijks Onderhoud",
+      description:
+        "Van lekkende kranen tot kapotte deurknoppen - alle kleine klussen die dagelijks voorkomen in commercieel vastgoed.",
+    },
+    {
+      step: "02",
+      title: "Preventief Onderhoud & Inspecties",
+      description:
+        "Regelmatige controles en preventief onderhoud om grotere problemen en kostbare storingen te voorkomen.",
+    },
+    {
+      step: "03",
+      title: "Snelle Respons & Noodgevallen",
+      description:
+        "24/7 bereikbaar voor acute storingen. Wij schakelen snel om downtime te minimaliseren en uw huurders tevreden te houden.",
+    },
+    {
+      step: "04",
+      title: "Eerste Aanspreekpunt op Locatie",
+      description:
+        "Uw ogen en oren ter plaatse. Wij signaleren problemen tijdig en denken proactief mee in onderhoudsbeheer.",
+    },
+    {
+      step: "05",
+      title: "Kleine Projecten & Vervangingswerk",
+      description:
+        "Ook voor kleinschalige renovaties en vervangingen kunt u bij ons terecht - zonder de overhead van grote aannemers.",
     },
   ];
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Huiseigenaar",
+      name: "Peter van der Meer",
+      role: "Vastgoedbeheerder",
       content:
-        "Fixzt maakte het kopen van ons eerste huis een absolute makkie. Hun team was professioneel, deskundig en altijd beschikbaar om onze vragen te beantwoorden.",
+        "Fixzt denkt mee en pakt zaken direct op. Sinds wij met hen werken zijn onze huurders een stuk tevredener over het technisch onderhoud.",
       rating: 5,
     },
     {
-      name: "Michael Chen",
+      name: "Linda Bakker",
+      role: "Property Manager Winkelcentrum",
+      content:
+        "Eindelijk één partij voor alle kleine klussen. Fixzt is betrouwbaar, reageert snel en werkt netjes. Precies wat je nodig hebt in een druk winkelcentrum.",
+      rating: 5,
+    },
+    {
+      name: "Mark Jansen",
       role: "Vastgoedbelegger",
       content:
-        "Ik heb met veel vastgoedbureaus gewerkt, maar Fixzt springt eruit. Hun marktinzichten hielpen mij winstgevende investeringsbeslissingen te nemen.",
-      rating: 5,
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Verkoper",
-      content:
-        "Ze verkochten mijn pand in slechts 3 weken! Het hele proces verliep soepel en transparant. Ik beveel hun diensten ten zeerste aan.",
+        "Voor mijn kantoorpanden is Fixzt onmisbaar. Ze houden alles in topconditie en voorkomen dat kleine problemen grote reparaties worden.",
       rating: 5,
     },
   ];
 
-  const process = [
+  const whyFixzt = [
     {
-      step: "01",
-      title: "Consultatie",
-      description:
-        "We beginnen met het begrijpen van uw behoeften, voorkeuren en budget om een persoonlijk plan te maken.",
+      title: "Full-Service",
+      description: "Eén partij voor alle onderhoudswerkzaamheden",
+      icon: "✓",
+      content:
+        "Geen gedoe met verschillende leveranciers. Wij regelen alles - van elektra tot sanitair, van schilderwerk tot kleine verbouwingen.",
     },
     {
-      step: "02",
-      title: "Pand Zoeken",
-      description:
-        "Krijg toegang tot onze uitgebreide database en wordt gekoppeld aan panden die aan uw criteria voldoen.",
+      title: "Commercieel Vastgoed als Specialisatie",
+      description: "Wij begrijpen uw vastgoed",
+      icon: "✓",
+      content:
+        "Jarenlange ervaring met kantoren, winkelcentra en bedrijfspanden. Wij kennen de eisen en werken discreet tijdens openingstijden.",
     },
     {
-      step: "03",
-      title: "Bezichtigingen",
-      description:
-        "Plan gemakkelijk pandbezichtigingen en krijg deskundig inzicht over elke locatie.",
+      title: "Snelle Respons",
+      description: "Direct schakelen wanneer nodig",
+      icon: "✓",
+      content:
+        "Storing? Lekkage? Wij zijn er snel. Minimale downtime betekent tevreden huurders en behoud van waarde.",
     },
     {
-      step: "04",
-      title: "Onderhandeling",
-      description:
-        "Wij onderhandelen de beste deal namens u en regelen al het papierwerk.",
+      title: "Preventief én Correctief",
+      description: "Problemen voorkomen én oplossen",
+      icon: "✓",
+      content:
+        "Regelmatige inspecties en preventief onderhoud voorkomen grotere problemen. En als er toch iets misgaat, lossen wij het snel op.",
     },
     {
-      step: "05",
-      title: "Afronding",
-      description:
-        "Rond de transactie soepel af met onze juridische en financiële ondersteuning.",
+      title: "Ogen en Oren op Locatie",
+      description: "Proactief meedenken",
+      icon: "✓",
+      content:
+        "Tijdens onderhoudswerkzaamheden signaleren wij mogelijke toekomstige problemen en adviseren wij proactief over verbeteringen.",
     },
   ];
 
@@ -175,21 +235,22 @@ export default function Home() {
             <div className="space-y-8">
               <FadeIn>
                 <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-sm font-medium text-primary mb-4">
-                  Fixzt vastgoed onderhoud
+                  Full-Service Onderhoud Commercieel Vastgoed
                 </div>
               </FadeIn>
 
               <SlideIn direction="right">
                 <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-                  Vind Vandaag Uw Droompand
+                  Uw Gebouw Technisch in Topconditie
                 </h1>
               </SlideIn>
 
               <SlideIn direction="right" delay={0.2}>
                 <p className="text-lg md:text-xl text-muted-foreground max-w-[600px]">
-                  Uw vertrouwde partner in het vinden van het perfecte pand. Wij
-                  maken vastgoed eenvoudig, transparant en stressvrij met meer
-                  dan 15 jaar expertise.
+                  Fixzt ondersteunt vastgoedbeheerders, eigenaren en beleggers
+                  bij alle kleine reparaties, dagelijks onderhoud en
+                  terugkerende klussen in kantoorgebouwen, winkelcentra en
+                  andere commerciële panden. Eén vaste, betrouwbare partij.
                 </p>
               </SlideIn>
 
@@ -197,7 +258,7 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="/services">
                     <Button size="lg" className="w-full sm:w-auto">
-                      Bekijk Panden
+                      Onze Diensten
                     </Button>
                   </Link>
                   <Link href="/about">
@@ -206,7 +267,7 @@ export default function Home() {
                       size="lg"
                       className="w-full sm:w-auto"
                     >
-                      Meer Informatie
+                      Over Fixzt
                     </Button>
                   </Link>
                 </div>
@@ -232,7 +293,7 @@ export default function Home() {
               <div className="relative h-[400px] md:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/homepage.jpg"
-                  alt="Modern vastgoed showcase"
+                  alt="Fixzt onderhoud commercieel vastgoed"
                   fill
                   className="object-cover"
                   priority
@@ -270,23 +331,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section with Animation */}
+      {/* Target Audience Section */}
       <section className="w-full py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4 md:px-6">
           <FadeIn>
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
-                Waarom Kiezen voor Fixzt?
+                Voor Wie is Fixzt?
               </h2>
               <p className="text-muted-foreground md:text-xl max-w-[800px] mx-auto">
-                Wij bieden uitgebreide vastgoedoplossingen op maat met
-                geavanceerde technologie en persoonlijke service
+                Wij ondersteunen professionele partijen in de commerciële
+                vastgoedmarkt
               </p>
             </div>
           </FadeIn>
 
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((feature, index) => (
+            {targetAudience.map((audience, index) => (
               <ScaleIn key={index} delay={index * 0.1}>
                 <motion.div
                   whileHover={{ scale: 1.05, y: -5 }}
@@ -294,15 +355,10 @@ export default function Home() {
                 >
                   <Card className="h-full border-2 hover:border-primary/50 transition-colors">
                     <CardHeader>
-                      <div className="text-4xl mb-4">{feature.icon}</div>
-                      <CardTitle>{feature.title}</CardTitle>
-                      <CardDescription>{feature.description}</CardDescription>
+                      <div className="text-4xl mb-4">{audience.icon}</div>
+                      <CardTitle>{audience.title}</CardTitle>
+                      <CardDescription>{audience.description}</CardDescription>
                     </CardHeader>
-                    <CardContent>
-                      <p className="text-sm text-muted-foreground">
-                        {feature.content}
-                      </p>
-                    </CardContent>
                   </Card>
                 </motion.div>
               </ScaleIn>
@@ -311,23 +367,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Properties */}
+      {/* Building Types */}
       <section className="w-full py-16 md:py-24 lg:py-32 bg-secondary">
         <div className="container mx-auto px-4 md:px-6">
           <FadeIn>
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
-                Uitgelichte Panden
+                Type Gebouwen
               </h2>
               <p className="text-muted-foreground md:text-xl max-w-[800px] mx-auto">
-                Ontdek onze zorgvuldig geselecteerde collectie van premium
-                vastgoed
+                Wij verzorgen onderhoud voor diverse commerciële vastgoedtypen
               </p>
             </div>
           </FadeIn>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {properties.map((property, index) => (
+            {buildingTypes.map((building, index) => (
               <SlideIn
                 key={index}
                 direction={index % 2 === 0 ? "left" : "right"}
@@ -340,56 +395,35 @@ export default function Home() {
                   <Card className="overflow-hidden h-full hover:shadow-xl transition-shadow">
                     <div className="relative h-48 bg-muted flex items-center justify-center">
                       <div className="text-center p-4">
-                        <div className="text-4xl mb-2">🏡</div>
+                        <div className="text-4xl mb-2">🏢</div>
                         <p className="text-xs text-muted-foreground">
-                          Afbeelding: {property.image}
+                          Afbeelding: {building.image}
                         </p>
                       </div>
                     </div>
                     <CardHeader>
-                      <CardTitle>{property.title}</CardTitle>
-                      <CardDescription>{property.location}</CardDescription>
+                      <CardTitle>{building.title}</CardTitle>
+                      <CardDescription>{building.description}</CardDescription>
                     </CardHeader>
-                    <CardContent>
-                      <div className="text-2xl font-bold text-primary mb-4">
-                        {property.price}
-                      </div>
-                      <div className="flex gap-4 text-sm text-muted-foreground">
-                        <span>🛏️ {property.beds} slaapkamers</span>
-                        <span>🚿 {property.baths} badkamers</span>
-                        <span>📏 {property.sqft} m²</span>
-                      </div>
-                      <Button className="w-full mt-4" variant="outline">
-                        Bekijk Details
-                      </Button>
-                    </CardContent>
                   </Card>
                 </motion.div>
               </SlideIn>
             ))}
           </div>
-
-          <FadeIn delay={0.5}>
-            <div className="text-center mt-12">
-              <Link href="/services">
-                <Button size="lg">Bekijk Alle Panden</Button>
-              </Link>
-            </div>
-          </FadeIn>
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* Services Section - What We Do */}
       <section className="w-full py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4 md:px-6">
           <FadeIn>
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
-                Hoe Het Werkt
+                Wat Doen We Precies?
               </h2>
               <p className="text-muted-foreground md:text-xl max-w-[800px] mx-auto">
-                Ons gestroomlijnde proces maakt het vinden van uw perfecte pand
-                eenvoudig en stressvrij
+                Onze diensten voor optimaal onderhoud van uw commercieel
+                vastgoed
               </p>
             </div>
           </FadeIn>
@@ -399,7 +433,7 @@ export default function Home() {
             <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-border -translate-y-1/2" />
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
-              {process.map((item, index) => (
+              {services.map((item, index) => (
                 <FadeIn key={index} delay={index * 0.1}>
                   <motion.div
                     className="relative"
@@ -427,8 +461,50 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* Why Fixzt Section */}
       <section className="w-full py-16 md:py-24 lg:py-32 bg-secondary">
+        <div className="container mx-auto px-4 md:px-6">
+          <FadeIn>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
+                Waarom Kiezen voor Fixzt?
+              </h2>
+              <p className="text-muted-foreground md:text-xl max-w-[800px] mx-auto">
+                Uw betrouwbare partner in commercieel vastgoedonderhoud
+              </p>
+            </div>
+          </FadeIn>
+
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {whyFixzt.map((feature, index) => (
+              <ScaleIn key={index} delay={index * 0.1}>
+                <motion.div
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Card className="h-full border-2 hover:border-primary/50 transition-colors">
+                    <CardHeader>
+                      <div className="text-4xl mb-4 text-primary font-bold">
+                        {feature.icon}
+                      </div>
+                      <CardTitle>{feature.title}</CardTitle>
+                      <CardDescription>{feature.description}</CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-sm text-muted-foreground">
+                        {feature.content}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </ScaleIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="w-full py-16 md:py-24 lg:py-32">
         <div className="container mx-auto px-4 md:px-6">
           <FadeIn>
             <div className="text-center mb-16">
@@ -436,7 +512,7 @@ export default function Home() {
                 Wat Onze Klanten Zeggen
               </h2>
               <p className="text-muted-foreground md:text-xl max-w-[800px] mx-auto">
-                Geloof ons niet zomaar - hoor het van onze tevreden klanten
+                Vastgoedprofessionals over hun ervaringen met Fixzt
               </p>
             </div>
           </FadeIn>
@@ -476,7 +552,7 @@ export default function Home() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="w-full py-16 md:py-24 lg:py-32">
+      <section className="w-full py-16 md:py-24 lg:py-32 bg-secondary">
         <div className="container mx-auto px-4 md:px-6">
           <FadeIn>
             <Card className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground border-0">
@@ -487,9 +563,8 @@ export default function Home() {
                       Blijf Op De Hoogte
                     </h3>
                     <p className="text-primary-foreground/90 mb-6">
-                      Abonneer u op onze nieuwsbrief en ontvang de nieuwste
-                      pandbeschrijvingen, marktinzichten en exclusieve deals in
-                      uw inbox.
+                      Ontvang praktische tips voor vastgoedonderhoud,
+                      onderhoudsplanningen en updates over onze diensten.
                     </p>
                   </div>
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -516,11 +591,12 @@ export default function Home() {
             <div className="flex flex-col items-center space-y-8 text-center">
               <div className="space-y-4 max-w-[800px]">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl">
-                  Klaar Om Uw Perfecte Pand Te Vinden?
+                  Klaar Om Uw Vastgoed Te Ontzorgen?
                 </h2>
                 <p className="text-muted-foreground md:text-xl">
-                  Neem vandaag nog contact met ons op en laat ons deskundige
-                  team u helpen de volgende stap te zetten in uw vastgoedreis
+                  Neem vandaag nog contact met ons op en ontdek hoe Fixzt uw
+                  gebouwen in topconditie houdt, uw huurders tevreden stelt en
+                  grotere problemen voorkomt.
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -529,7 +605,7 @@ export default function Home() {
                   whileTap={{ scale: 0.95 }}
                 >
                   <Button size="lg" className="text-lg px-8">
-                    Neem Vandaag Contact Op
+                    Neem Contact Op
                   </Button>
                 </motion.div>
                 <motion.div

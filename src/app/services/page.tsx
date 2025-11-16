@@ -15,75 +15,65 @@ import Link from "next/link";
 export default function Services() {
   const services = [
     {
-      title: "Vastgoedverkoop",
-      description: "Koop of verkoop residentieel en commercieel vastgoed",
-      icon: "🏠",
-      image: "/service-sales.jpg",
+      title: "Kleine Reparaties & Dagelijks Onderhoud",
+      description:
+        "Snelle en betrouwbare oplossingen voor dagelijkse onderhoudsvraagstukken",
+      icon: "🔧",
+      image: "/service-repairs.jpg",
       features: [
-        "Marktanalyse en prijsstrategie",
-        "Professionele fotografie en advertenties",
-        "Onderhandelings- en afsluitingshulp",
-        "Juridische documentatieondersteuning",
+        "Oplossen van lekkages",
+        "Herstellen van hang- en sluitwerk (deuren, ramen, sloten, scharnieren)",
+        "Herstellen van plafonds, wanden en deuren",
+        "Klein bouwkundig herstel en afwerking",
       ],
     },
     {
-      title: "Vastgoedverhuur",
-      description: "Vind de perfecte huurwoning of verhuur uw vastgoed",
-      icon: "🔑",
-      image: "/service-rentals.jpg",
+      title: "Preventief Onderhoud, Controles en Inspecties",
+      description: "Proactieve bewaking en onderhoud om problemen voor te zijn",
+      icon: "🔍",
+      image: "/service-inspections.jpg",
       features: [
-        "Screening en verificatie van huurders",
-        "Voorbereiding van huurovereenkomsten",
-        "Coördinatie van vastgoedonderhoud",
-        "Huurinning en beheer",
+        "Periodieke controles aan klimaatinstallaties en technische ruimten",
+        "Visuele inspecties van bouwkundige en installatietechnische onderdelen",
+        "Signaleren van slijtage, risico's en toekomstige onderhoudsbehoefte",
+        "Rapportage en terugkoppeling richting beheerder of eigenaar",
       ],
     },
     {
-      title: "Vastgoedbeheer",
-      description: "Uitgebreide vastgoedbeheersoplossingen",
-      icon: "🏢",
-      image: "/service-management.jpg",
+      title: "Snelle Respons & Noodgevallen",
+      description: "Direct ter plaatse bij storingen en calamiteiten",
+      icon: "🚨",
+      image: "/service-emergency.jpg",
       features: [
-        "24/7 spoedonderhoud",
-        "Regelmatige vastgoedinspecties",
-        "Financiële rapportage en boekhouding",
-        "Beheer van huurderrelaties",
+        "Snel ter plaatse bij storingen of calamiteiten",
+        "Tijdelijke noodoplossing of directe reparatie waar mogelijk",
+        "Communicatie met huurders en betrokken partijen op locatie",
+        "24/7 bereikbaarheid voor spoedgevallen",
       ],
     },
     {
-      title: "Beleggingsadvies",
-      description: "Deskundig advies voor vastgoedbeleggingen",
-      icon: "📈",
-      image: "/service-investment.jpg",
+      title: "Eerste Aanspreekpunt op Locatie",
+      description:
+        "Uw vaste contactpersoon voor alle facilitymanagement vraagstukken",
+      icon: "👥",
+      image: "/service-coordination.jpg",
       features: [
-        "Analyse van markttrends",
-        "ROI-berekeningen en projecties",
-        "Strategieën voor portefeuillediversificatie",
-        "Fiscaal optimalisatieadvies",
+        "Begeleiding van installateurs en aannemers",
+        "Direct contact met huurders en gebruikers",
+        "Afstemming met beheerder of assetmanager",
+        "Coördinatie van kleine werkzaamheden",
       ],
     },
     {
-      title: "Vastgoedtaxatie",
-      description: "Nauwkeurige beoordeling en taxatie van vastgoed",
-      icon: "💰",
-      image: "/service-valuation.jpg",
+      title: "Kleine Projecten & Vervangingswerk",
+      description: "Uitvoering van kleinschalige projecten en upgrades",
+      icon: "🏗️",
+      image: "/service-projects.jpg",
       features: [
-        "Vergelijkende marktanalyse",
-        "Professionele taxatiediensten",
-        "Beoordeling van ontwikkelingspotentieel",
-        "Gedetailleerde taxatierapporten",
-      ],
-    },
-    {
-      title: "Juridische Bijstand",
-      description: "Uitgebreide juridische ondersteuning voor transacties",
-      icon: "⚖️",
-      image: "/service-legal.jpg",
-      features: [
-        "Contractbeoordeling en opstelling",
-        "Eigendomsonderzoek en verificatie",
-        "Begeleiding bij naleving van regelgeving",
-        "Ondersteuning bij geschillenbeslechting",
+        "Brandmeldinstallaties (vervanging, aanpassingen)",
+        "Vervangen van verlichting door LED-oplossingen",
+        "Kleinschalige bouwkundige aanpassingen",
+        "Deelprojecten in kantoren en light industrial panden",
       ],
     },
   ];
@@ -124,9 +114,9 @@ export default function Services() {
 
             <FadeIn delay={0.2}>
               <p className="mx-auto max-w-[800px] text-muted-foreground text-lg md:text-xl">
-                Uitgebreide vastgoedoplossingen ontworpen om aan al uw
-                vastgoedbehoeften te voldoen met deskundige begeleiding en
-                persoonlijke service
+                Professioneel gebouwbeheer en technisch onderhoud voor kantoren
+                en light industrial panden. Van preventief onderhoud tot snelle
+                reparaties, wij zorgen dat uw vastgoed optimaal functioneert.
               </p>
             </FadeIn>
           </div>
@@ -214,7 +204,8 @@ export default function Services() {
                 Waarom Met Ons Werken?
               </h2>
               <p className="text-muted-foreground md:text-xl max-w-[800px] mx-auto">
-                Ervaar het verschil van samenwerken met echte professionals
+                Ervaar het verschil van professioneel gebouwbeheer met een
+                persoonlijke aanpak
               </p>
             </div>
           </FadeIn>
@@ -222,24 +213,24 @@ export default function Services() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                icon: "🎯",
-                title: "Persoonlijke Service",
-                desc: "Oplossingen op maat voor uw unieke behoeften",
+                icon: "🏢",
+                title: "Vaste Aanwezigheid in Gebouw",
+                desc: "Direct beschikbaar en ter plaatse voor al uw vragen",
               },
               {
                 icon: "⚡",
-                title: "Snelle Reactie",
-                desc: "Snelle afhandeling van alle aanvragen",
+                title: "Snelle Reactietijd",
+                desc: "Snel ingrijpen bij storingen en calamiteiten",
               },
               {
-                icon: "🏆",
-                title: "Bewezen Resultaten",
-                desc: "Trackrecord van succesvolle transacties",
+                icon: "🔍",
+                title: "Preventieve Aanpak",
+                desc: "Problemen voorkomen door regelmatige controles",
               },
               {
-                icon: "💼",
-                title: "Professioneel Team",
-                desc: "Deskundige makelaars tot uw dienst",
+                icon: "👤",
+                title: "Één Vast Aanspreekpunt",
+                desc: "Eén contactpersoon voor alle facilitymanagement vraagstukken",
               },
             ].map((benefit, index) => (
               <SlideIn
@@ -280,7 +271,7 @@ export default function Services() {
                 Ons Proces
               </h2>
               <p className="text-muted-foreground md:text-xl max-w-[800px] mx-auto">
-                Een gestroomlijnde aanpak om uw vastgoeddoelen te bereiken
+                Een gestroomlijnde aanpak voor optimaal gebouwbeheer
               </p>
             </div>
           </FadeIn>
@@ -289,23 +280,23 @@ export default function Services() {
             {[
               {
                 step: "1",
-                title: "Eerste Consultatie",
-                desc: "We ontmoeten elkaar om uw behoeften en doelen te begrijpen",
+                title: "Kennismaking & Intake",
+                desc: "We maken kennis met uw gebouw en bespreken uw specifieke wensen en behoeften",
               },
               {
                 step: "2",
-                title: "Strategieontwikkeling",
-                desc: "Een op maat gemaakt plan ontwikkelen voor uw situatie",
+                title: "Plan van Aanpak",
+                desc: "Ontwikkelen van een onderhoudsplan op maat voor uw pand",
               },
               {
                 step: "3",
-                title: "Uitvoering",
-                desc: "Het plan uitvoeren met precisie en expertise",
+                title: "Uitvoering & Monitoring",
+                desc: "Actieve uitvoering van onderhoud met continue bewaking en rapportage",
               },
               {
                 step: "4",
-                title: "Voortdurende Ondersteuning",
-                desc: "Continue hulp bieden tot voltooiing",
+                title: "Continue Optimalisatie",
+                desc: "Regelmatige evaluatie en bijsturing voor optimale prestaties",
               },
             ].map((item, index) => (
               <SlideIn
@@ -349,7 +340,7 @@ export default function Services() {
                 </h2>
                 <p className="text-primary-foreground/90 text-lg md:text-xl">
                   Neem vandaag nog contact met ons op om te bespreken hoe wij u
-                  kunnen helpen met uw vastgoedbehoeften
+                  kunnen helpen met professioneel gebouwbeheer
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
